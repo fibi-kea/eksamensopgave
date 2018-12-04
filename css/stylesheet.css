@@ -1,0 +1,86 @@
+:root {
+    font-size: 62.5%;
+
+    --txt: #000000;
+    --txt_light: #989898;
+
+    --body: #ffffff;
+
+    --bg_01: #eb8f8f;
+    --bg_02: #9aeb8f;
+    --bg_03: #8f95eb;
+}
+
+body {
+    font-family: 'Geomanist';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3rem;
+    letter-spacing: 0.05rem;
+    color: var(--txt);
+
+    /*clear all space*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/*Header*/
+
+/*Nav*/
+nav {
+    float: right;
+}
+
+nav a {
+    color: var(--txt_light);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    padding: 15px;
+    cursor: pointer;
+}
+
+/* ---------------------------- */
+
+
+
+/*Home*/
+
+/*Splash*/
+.home_splash {}
+
+/* ---------------------------- */
+
+/*Products*/
+.home_products {}
+
+/* ---------------------------- */
+
+/*About*/
+.home_about {}
+
+/* ---------------------------- */
+
+/*Webshop*/
+.home_webshop {}
+
+/* ---------------------------- */
+
+/*Contact*/
+.home_contact {}
+
+/* ---------------------------- */
