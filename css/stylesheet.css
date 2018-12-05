@@ -50,6 +50,12 @@ p {
     letter-spacing: 0.02rem;
 }
 
+a {
+    color: var(--txt);
+    text-decoration: none;
+}
+
+/*Character styles*/
 .italic {
     font-style: italic;
 }
@@ -58,40 +64,159 @@ p {
     font-weight: bold;
 }
 
-a {}
+.txt_light {
+    color: var(--txt_light);
+}
+
+.txt_black {
+    color: var(--txt);
+}
 
 /* ---------------------------- */
 
 /*HEADER*/
-/*Nav*/
+/*Burger nav*/
+
+header {
+    position: relative;
+}
+
+.burger {
+    cursor: pointer;
+    border: none;
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    z-index: 2;
+}
+
+.burger:hover .bar2 {
+    margin-left: 0;
+}
+
 nav {
-    margin-top: 40px;
-    margin-right: 40px;
-    width: 100%;
-    text-align: right;
-}
-
-nav a {
-    font-size: 1.9rem;
-    color: var(--txt_light);
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: var(--txt);
-    text-decoration: underline;
+    height: 0%;
+    width: 100vw;
+    overflow: hidden;
+    transition: 0.6s;
+    background: var(--txt);
+    text-align: center;
+    top: 0;
+    position: fixed;
+    opacity: 0.95;
+    filter: alpha(opacity=95);
+    /* For IE8 and earlier */
 }
 
 nav ul {
     list-style: none;
     margin: 0;
-    margin-right: 40px;
+    padding: 0;
 }
 
 nav li {
-    display: inline;
-    padding-left: 50px;
+    padding: 10px;
     cursor: pointer;
+}
+
+nav a {
+    font-size: 1.7rem;
+    color: var(--body);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--txt_light);
+    text-decoration: underline;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    height: 2px;
+    margin: 8px 0;
+    transition: 0.4s;
+}
+
+.bar1 {
+    background-color: var(--txt);
+    width: 30px;
+}
+
+.bar2 {
+    background-color: var(--txt);
+    width: 30px;
+    margin-left: 10px;
+}
+
+.bar3 {
+    background-color: var(--txt);
+    width: 30px;
+}
+
+nav.show {
+    height: 100%;
+}
+
+/* Rotate first bar */
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+    background-color: var(--body);
+}
+
+/* Fade out the second bar */
+
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: var(--body);
+}
+
+/*Search bar*/
+.search_icon {
+    background-image: url(../img/search_white.png);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin: 0;
+}
+
+.search-container {
+    width: 250px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+header input[type=text] {
+    background-color: var(--txt);
+    color: var(--txt);
+    width: 200px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    border-color: white;
+}
+
+header input[type=text]:hover {
+    background-color: var(--txt_light);
+}
+
+header input::placeholder {
+    color: var(--body);
+    font-size: 1.3rem;
 }
 
 /* ---------------------------- */
@@ -147,7 +272,6 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-flow: column;
-    grid-gap: 50px;
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 100px;
@@ -155,6 +279,7 @@ main {
 
 .home_description {
     grid-column: 1 / 3;
+    padding-top: 8%;
 }
 
 .home_product {
@@ -172,6 +297,7 @@ main {
 .arrow {
     width: 50px;
     margin-top: 10px;
+    transition: 1s ease;
 }
 
 .arrow:hover {
@@ -203,18 +329,100 @@ main {
 
 
 
+/*FOOTER*/
+footer {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+footer p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
+
+/*Copyright*/
+.copyright {
+    grid-column: 1 / 4;
+    text-align: center;
+}
+
+/*SoMe*/
+.some {
+    grid-column: 1 / 4;
+    text-align: center;
+}
+
+footer .fab {
+    font-size: 1.6rem;
+}
+
+.fab:hover {
+    color: var(--txt);
+    transform: scale(1.2);
+    transition: 2s ease;
+}
+
+a:nth-child(2) .fab {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*Mail*/
+.mail {
+    grid-column: 1 / 4;
+    text-align: center;
+}
+
+
+
+
+/*- - - - - - - - - - - - - media queries 575px - - - - - - - - - - - - -*/
+
+@media screen and (min-width: 575px) {
+
+    /*FOOTER*/
+    footer p {
+        line-height: 1.4rem;
+    }
+
+    /*Copyright*/
+    .copyright {
+        grid-column: 1 / 2;
+        text-align: left;
+    }
+
+    /*SoMe*/
+    .some {
+        grid-column: 2 / 3;
+        text-align: center;
+    }
+
+    /*Mail*/
+    .mail {
+        grid-column: 3 / 4;
+        text-align: right;
+    }
+}
+
 
 
 
 
 /*- - - - - - - - - - - - - media queries 768px - - - - - - - - - - - - -*/
 
-
 @media screen and (min-width: 768px) {
 
     /*Products*/
     .home_products {
         max-width: 1000px;
+    }
+
+    .home_single_product {
+        grid-gap: 50px;
     }
 
     .home_description {
@@ -253,3 +461,73 @@ main {
 
 
 }
+
+
+
+/*- - - - - - - - - - - - - media queries 991px - - - - - - - - - - - - -*/
+
+@media screen and (min-width: 991px) {
+
+    /*Desktop menu*/
+    .burger {
+        display: none;
+    }
+
+
+    nav {
+        background: var(--body);
+        height: auto;
+        margin-top: 40px;
+        margin-right: 40px;
+        text-align: right;
+        transition: 0s;
+        position: sticky;
+    }
+
+    nav a {
+        color: var(--txt_light);
+    }
+
+    nav a:hover {
+        color: var(--txt);
+    }
+
+    nav ul {
+        margin-right: 120px;
+    }
+
+    nav li {
+        display: inline;
+        padding-left: 50px;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+    /*Search bar*/
+    .search_icon {
+        background-image: url(../img/search.png);
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        float: left;
+        margin: 0;
+    }
+
+    .search-container {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 40px;
+    }
+}
+
+
+
+/*- - - - - - - - - - - - - media queries 1024px - - - - - - - - - - - - -*/
+
+@media screen and (min-width: 1024px) {}

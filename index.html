@@ -13,15 +13,42 @@
 <body>
 
     <!--Header-->
-    <nav>
-        <ul>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+
+        <!--Burger menu start-->
+        <div class="burger">
+
+            <!--bar 1-->
+            <div class="bar1"></div>
+
+            <!--bar 2-->
+            <div class="bar2"></div>
+
+            <!--bar 3-->
+            <div class="bar3"></div>
+        </div>
+        <!--Burger menu end-->
+
+        <!--Dropdown menu on click-->
+        <nav>
+            <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <!--Search bar-->
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <div class="search_icon"></div>
+                    <input type="text" placeholder="Search.." id="search" name="search">
+                </form>
+            </div>
+        </nav>
+    </header>
+
 
     <main>
 
@@ -30,8 +57,10 @@
             <div class="txt_content">
                 <h1>Amanda Betz</h1>
                 <p>Amanda Bets graduated from the Royal Danish Academy of Fine Arts, School</p>
-                <p><i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-instagram"></i>
+                <p>
+                    <a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="txt_light"><i class="fab fa-linkedin-in"></i></a>
                 </p>
             </div>
             <div class="image"></div>
@@ -100,11 +129,29 @@
     </main>
 
     <!--Footer-->
-    <footer></footer>
+    <footer>
+        <div class="copyright">
+            <p class="bold">&copy; Amanda Betz. 2018 | <a href="#" class="txt_light">Privacy policy</a></p>
+        </div>
+
+        <div class="some">
+            <p>
+                <a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="txt_light"><i class="fab fa-linkedin-in"></i></a>
+            </p>
+        </div>
+
+        <div class="mail">
+            <p><a href="mailto:hello@amandabetz.com" class="bold txt_light">hello@amandabetz.com</a></p>
+        </div>
+
+    </footer>
 
     <!--Javascript-->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/burger.js"></script>
 </body>
 
 </html>
