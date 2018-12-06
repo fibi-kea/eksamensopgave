@@ -1,12 +1,12 @@
 :root {
     font-size: 62.5%;
 
-    --txt: #000000;
+    --txt: #333;
     --txt_light: #989898;
 
     --body: #ffffff;
 
-    --bg_01: #eb8f8f;
+    --bg_01: #fafafa;
     --bg_02: #9aeb8f;
     --bg_03: #8f95eb;
 }
@@ -79,6 +79,7 @@ a {
 
 header {
     position: relative;
+    z-index: 1;
 }
 
 .burger {
@@ -223,10 +224,18 @@ header input::placeholder {
 
 main {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-/*HOME*/
+
+
+/*
+
+
+
+
+HOME--------------------------
+*/
 /*Splash*/
 .home_splash {
     display: grid;
@@ -234,6 +243,7 @@ main {
     width: 100%;
     margin-bottom: 50px;
     grid-gap: 25px;
+    position: relative;
 }
 
 .txt_content {
@@ -242,12 +252,18 @@ main {
     margin-top: 150px;
 }
 
-.image {
+.fullscreen-bg {
     grid-column: 6 / 13;
-    background-image: url(../img/03.jpg);
-    background-size: cover;
+    overflow: hidden;
     height: 100vh;
-    background-position: -50px -80px;
+    position: relative;
+}
+
+.fullscreen-bg_video {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -50px;
 }
 
 .home_splash p {
@@ -329,11 +345,66 @@ main {
 
 
 
+/*
+
+
+
+
+PRODUCTS--------------------------
+*/
+/*splash*/
+.products_splash {
+    overflow: hidden;
+    height: 400px;
+    position: relative;
+    margin: 40px;
+}
+
+.products_splash img {
+    width: 100%;
+}
+
+
+/*Products Container*/
+.products_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1200px;
+}
+
+.products_container p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: var(--txt);
+}
+
+.single_product {}
+
+.product_thumbnail {
+    overflow: hidden;
+    height: 300px;
+    margin-bottom: 25px;
+}
+
+.product_thumbnail img {
+    width: 100%;
+}
+
+.product_info {}
+
+
+
+
 /*FOOTER*/
 footer {
     margin-left: 40px;
     margin-right: 40px;
-    margin-top: 30px;
+    margin-top: 80px;
     margin-bottom: 10px;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -469,6 +540,8 @@ a:nth-child(2) .fab {
 @media screen and (min-width: 991px) {
 
     /*Desktop menu*/
+
+
     .burger {
         display: none;
     }
@@ -507,8 +580,8 @@ a:nth-child(2) .fab {
     /*Search bar*/
     .search_icon {
         background-image: url(../img/search.png);
-        background-size: 80%;
-        background-position: center;
+        background-size: 60%;
+        background-position: 50% 25%;
         background-repeat: no-repeat;
         height: 30px;
         width: 30px;

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!--Header-->
+    <header>
+
+        <!--Burger menu start-->
+        <div class="burger">
+
+            <!--bar 1-->
+            <div class="bar1"></div>
+
+            <!--bar 2-->
+            <div class="bar2"></div>
+
+            <!--bar 3-->
+            <div class="bar3"></div>
+        </div>
+        <!--Burger menu end-->
+
+        <!--Dropdown menu on click-->
+        <nav>
+            <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <!--Search bar-->
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <div class="search_icon"></div>
+                    <input type="text" placeholder="Search.." id="search" name="search">
+                </form>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!--Splash-->
+        <section class="products_splash">
+            <img src="img/02.jpg" alt="">
+        </section>
+
+        <section class="products_container">
+            <article class="single_product">
+                <div class="product_thumbnail">
+                    <img src="img/01.jpg" alt="">
+                </div>
+                <div class="product_info">01</div>
+            </article>
+
+            <article class="single_product">
+                <div class="product_thumbnail">
+                    <img src="img/02.jpg" alt="">
+                </div>
+                <div class="product_info">
+                    <h2>Shoji</h2>
+                    <p>Pendant Lamp inspired by the intricate dome pattern in the Mosque 'Sheikh Lotfollah' in Isfahan, Iran.</p>
+                </div>
+            </article>
+
+            <article class="single_product">
+                <div class="product_thumbnail">
+                    <img src="img/03.jpg" alt="">
+                </div>
+                <div class="product_info">03</div>
+            </article>
+
+            <article class="single_product">
+                <div class="product_thumbnail">
+                    <img src="img/02.jpg" alt="">
+                </div>
+                <div class="product_info">04</div>
+            </article>
+
+            <article class="single_product">
+                <div class="product_thumbnail">
+                    <img src="img/02.jpg" alt="">
+                </div>
+                <div class="product_info">05</div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="copyright">
+            <p class="bold">&copy; Amanda Betz. 2018 | <a href="#" class="txt_light">Privacy policy</a></p>
+        </div>
+
+        <div class="some">
+            <p>
+                <a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="txt_light"><i class="fab fa-linkedin-in"></i></a>
+            </p>
+        </div>
+
+        <div class="mail">
+            <p><a href="mailto:hello@amandabetz.com" class="bold txt_light">hello@amandabetz.com</a></p>
+        </div>
+
+    </footer>
+
+    <!--Javascript-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/burger.js"></script>
+</body>
+
+</html>
