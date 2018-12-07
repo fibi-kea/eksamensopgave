@@ -13,11 +13,14 @@
 <body>
 
     <!--Header-->
+    <div class="head_bg"></div>
     <header>
+        <a href="index.html">
+            <div class="logo"></div>
+        </a>
 
         <!--Burger menu start-->
         <div class="burger">
-
             <!--bar 1-->
             <div class="bar1"></div>
 
@@ -27,16 +30,17 @@
             <!--bar 3-->
             <div class="bar3"></div>
         </div>
+
         <!--Burger menu end-->
 
         <!--Dropdown menu on click-->
         <nav>
             <ul>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">News</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="webshop.html">Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
 
             <!--Search bar-->
@@ -56,7 +60,7 @@
         <section class="home_splash">
             <div class="txt_content">
                 <h1>Amanda Betz</h1>
-                <p>Amanda Bets graduated from the Royal Danish Academy of Fine Arts, School</p>
+                <p>"It all begins with paper - pushing the boundaries of the materials to achieve new experimental shapes."</p>
                 <p>
                     <a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
@@ -64,7 +68,7 @@
                 </p>
             </div>
             <div class="fullscreen-bg">
-                <video loop muted autoplay poster="img/03.jpg" class="fullscreen-bg_video">
+                <video loop muted autoplay poster="" class="fullscreen-bg_video hidden">
                     <source src="img/video/lamp.mp4" type="video/mp4">
                 </video>
             </div>
@@ -119,16 +123,71 @@
 
         <!--------------About-------------->
         <section class="home_about">
-            <h2>About</h2>
-            <p>Amanda Betz graduated from the Royal Danish Academy of Fine Arts, School of Architecture in 2005 and was awarded the acclaimed VOLA-prize for her final project. Her pendant Shayk has been displayed in the MoMA store in New York and was on the cover of the MoMA Catalogue in April 2015. She is an assistant professor at the Royal Danish Academy of Fine Arts, School of Architecture and has been a jury member for the Danish Design Awards.</p>
+
+            <article class="home_about_content">
+                <div class="home_about_header">
+                    <h2>Who am I?</h2>
+                </div>
+                <div class="home_about_txt">
+                    <p>
+                        Amanda Betz is a danish designer, graduated from the Royal Danish Academy of Fine Arts, School of Architecture in 2005 and was awarded the acclaimed VOLA-prize for her final project. Her pendant Shayk has been displayed in the MoMA store in New York and was on the cover of the MoMA Catalogue in April 2015. She is an assistant professor at the Royal Danish Academy of Fine Arts, School of Architecture and has been a jury member for the Danish Design Awards.
+                    </p>
+                </div>
+
+                <div class="home_about_txt2">
+                    <p>
+                        Amanda Betz works in the intersection of art, design and architecture, with a special interest in light, space and the span between two and three dimensions. Her design tends to reflect architecture as fragments of buildings, and she has garnered both local and international acclaim for her ability to capture complexity in a simple object.
+                    </p>
+                    <p class="read_more"><img src="img/more_arrow.png" class="arrow" alt="read more"></p>
+                </div>
+            </article>
 
         </section>
 
         <!--------------Webshop-------------->
-        <section class="home_webshop"></section>
+        <div class="bg_color">
+            <section class="home_webshop">
+                <article class="home_webshop_content">
+                    <div class="home_webshop_description">
+                        <h2>Online store</h2>
+                        <p>
+                            My focus on design is that of art, aesthetics and purity,
+                            with a special interest in light, space and the span
+                            between two and three dimensions.
+                        </p>
+
+                        <p>
+                            Here you can find all my newest design i paper,
+                            3d-patterns folds, decorations i brass and wood.
+                        </p>
+                    </div>
+
+                    <div class="home_webshop_product">
+                        <img src="img/papirdummy.png" class="home_webshop_img" alt="">
+                    </div>
+
+                    <button onclick="location.href='http://www.example.com'" type="button">Go to store</button>
+                </article>
+            </section>
+        </div>
 
         <!--------------Contact-------------->
-        <section class="home_contact"></section>
+        <section class="home_contact">
+
+            <article class="home_contact_content">
+
+                <div class="home_contact_txt">
+                    <h2>Dont be shy,<br>
+                        talk to me.</h2>
+                    <p>
+                        I Reply to everyone right away. See for yourself.
+                    </p>
+                    <p class="sayhi">SAY HI</p>
+                    <h3><a href="mailto:hello@amandabetz.com" class="bold txt_light">hello@amandabetz.com</a></h3>
+                </div>
+            </article>
+
+        </section>
 
     </main>
 
