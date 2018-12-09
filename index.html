@@ -2,219 +2,136 @@
 <html lang="da">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Amanda Betz | Design, art & crafts</title>
+	<meta name="description" content="Beskriv hvad siden handler om med brug af gode keyword. - 150 - 170 tegn.">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body>
 
-    <!--Header-->
-    <div class="head_bg"></div>
-    <header>
-        <a href="index.html">
-            <div class="logo"></div>
-        </a>
+	<!--Header-->
+	<div class="head_bg"></div>
+	<header>
+		<a href="index.html">
+			<div class="logo"></div>
+		</a>
 
-        <!--Burger menu start-->
-        <div class="burger">
-            <!--bar 1-->
-            <div class="bar1"></div>
+		<!--Burger menu start-->
+		<div class="burger">
+			<!--bar 1-->
+			<div class="bar1"></div>
 
-            <!--bar 2-->
-            <div class="bar2"></div>
+			<!--bar 2-->
+			<div class="bar2"></div>
 
-            <!--bar 3-->
-            <div class="bar3"></div>
-        </div>
+			<!--bar 3-->
+			<div class="bar3"></div>
+		</div>
 
-        <!--Burger menu end-->
+		<!--Burger menu end-->
 
-        <!--Dropdown menu on click-->
-        <nav>
-            <ul>
-                <li><a href="index.html">News</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="webshop.html">Store</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+		<!--Dropdown menu on click-->
+		<nav>
+			<ul>
+				<li><a href="index.html">News</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="webshop.html">Store</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
 
-            <!--Search bar-->
-            <div class="search-container">
-                <form action="/action_page.php">
-                    <div class="search_icon"></div>
-                    <input type="text" placeholder="Search.." id="search" name="search">
-                </form>
-            </div>
-        </nav>
-    </header>
-
-
-    <main>
-
-        <!--------------Splash-------------->
-        <section class="home_splash">
-            <div class="txt_content">
-                <h1>Amanda Betz</h1>
-                <p>"It all begins with paper - pushing the boundaries of the materials to achieve new experimental shapes."</p>
-                <p>
-                    <a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="txt_light"><i class="fab fa-linkedin-in"></i></a>
-                </p>
-            </div>
-            <div class="fullscreen-bg">
-                <video loop muted autoplay poster="" class="fullscreen-bg_video hidden">
-                    <source src="img/video/lamp.mp4" type="video/mp4">
-                </video>
-            </div>
-        </section>
+			<!--Search bar-->
+			<div class="search-container">
+				<form action="/action_page.php">
+					<div class="search_icon"></div>
+					<input type="text" placeholder="Search.." id="search" name="search">
+				</form>
+			</div>
+		</nav>
+	</header>
 
 
-        <!--------------Products-------------->
-        <section class="home_products">
+	<main>
+
+		<section data-container>
+
+			<template data-template>
+				<!--------------Splash-------------->
+				<section class="home_splash">
+					<div class="txt_content">
+						<h1 data-overskrift></h1>
+						<p data-underrubrik></p>
+						<p>
+							<a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
+							<a href="#" class="txt_light"><i class="fab fa-linkedin-in"></i></a>
+						</p>
+					</div>
+					<div class="fullscreen-bg">
+						<video loop muted autoplay poster="" class="fullscreen-bg_video hidden">
+							<source src="img/video/lamp.mp4" type="video/mp4">
+						</video>
+					</div>
+				</section>
+
+			</template>
+		</section>
 
 
-            <article class="home_single_product">
-                <div class="home_product">
-                    <img src="img/02.jpg" class="single_product_img" alt="">
-                </div>
+		<!--------------Products-------------->
+		<section class="home_products">
 
-                <div class="home_description">
-                    <h2>Shayk 1</h2>
-                    <p>Pendant Lamp inspired by the intricate dome pattern in the Mosque 'Sheikh Lotfollah' in Isfahan, Iran.</p>
+			<!--events fra wordpress-->
+			<div class="content" data-produktContainer></div>
 
-                    <p class="read_more"><img src="img/more_arrow.png" class="arrow" alt="read more"></p>
-                </div>
-            </article>
+			<template data-produktTemplate>
+				<article class="home_single_product">
+					<div class="home_product">
+						<img src="img/02.jpg" class="single_product_img" alt="" data-billede>
+					</div>
 
-            <article class="home_single_product">
-                <div class="home_product">
-                    <img src="img/01.jpg" class="single_product_img" alt="">
-                </div>
+					<div class="home_description">
+						<h2 data-title></h2>
+						<p data-description>Pendant Lamp inspired by the intricate dome pattern in the Mosque 'Sheikh Lotfollah' in Isfahan, Iran.</p>
 
-                <div class="home_description">
-                    <h2>Shayk 2</h2>
-                    <p>Pendant Lamp inspired by the intricate dome pattern in the Mosque 'Sheikh Lotfollah' in Isfahan, Iran.</p>
-
-                    <p class="read_more"><img src="img/more_arrow.png" class="arrow" alt="read more"></p>
-                </div>
-            </article>
-
-            <article class="home_single_product">
-                <div class="home_product">
-                    <img src="img/02.jpg" class="single_product_img" alt="">
-                </div>
-
-                <div class="home_description">
-                    <h2>Shayk 1</h2>
-                    <p>Pendant Lamp inspired by the intricate dome pattern in the Mosque 'Sheikh Lotfollah' in Isfahan, Iran.</p>
-
-                    <p class="read_more"><img src="img/more_arrow.png" class="arrow" alt="read more"></p>
-                </div>
-            </article>
+						<p class="read_more"><img src="img/more_arrow.png" class="arrow" alt="read more"></p>
+					</div>
+				</article>
+			</template>
+		</section>
 
 
-        </section>
 
-        <!--------------About-------------->
-        <section class="home_about">
+	</main>
 
-            <article class="home_about_content">
-                <div class="home_about_header">
-                    <h2>Who am I?</h2>
-                </div>
-                <div class="home_about_txt">
-                    <p>
-                        Amanda Betz is a danish designer, graduated from the Royal Danish Academy of Fine Arts, School of Architecture in 2005 and was awarded the acclaimed VOLA-prize for her final project. Her pendant Shayk has been displayed in the MoMA store in New York and was on the cover of the MoMA Catalogue in April 2015. She is an assistant professor at the Royal Danish Academy of Fine Arts, School of Architecture and has been a jury member for the Danish Design Awards.
-                    </p>
-                </div>
+	<!--Footer-->
+	<footer>
+		<div class="copyright">
+			<p class="bold">&copy; Amanda Betz. 2018 | <a href="#" class="txt_light">Privacy policy</a></p>
+		</div>
 
-                <div class="home_about_txt2">
-                    <p>
-                        Amanda Betz works in the intersection of art, design and architecture, with a special interest in light, space and the span between two and three dimensions. Her design tends to reflect architecture as fragments of buildings, and she has garnered both local and international acclaim for her ability to capture complexity in a simple object.
-                    </p>
-                    <p class="read_more"><img src="img/more_arrow.png" class="arrow" alt="read more"></p>
-                </div>
-            </article>
+		<div class="some">
+			<p>
+				<a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
+				<a href="#" class="txt_light"><i class="fab fa-linkedin-in"></i></a>
+			</p>
+		</div>
 
-        </section>
+		<div class="mail">
+			<p><a href="mailto:hello@amandabetz.com" class="bold txt_light">hello@amandabetz.com</a></p>
+		</div>
 
-        <!--------------Webshop-------------->
-        <div class="bg_color">
-            <section class="home_webshop">
-                <article class="home_webshop_content">
-                    <div class="home_webshop_description">
-                        <h2>Online store</h2>
-                        <p>
-                            My focus on design is that of art, aesthetics and purity,
-                            with a special interest in light, space and the span
-                            between two and three dimensions.
-                        </p>
+	</footer>
 
-                        <p>
-                            Here you can find all my newest design i paper,
-                            3d-patterns folds, decorations i brass and wood.
-                        </p>
-                    </div>
-
-                    <div class="home_webshop_product">
-                        <img src="img/papirdummy.png" class="home_webshop_img" alt="">
-                    </div>
-
-                    <button onclick="location.href='http://www.example.com'" type="button">Go to store</button>
-                </article>
-            </section>
-        </div>
-
-        <!--------------Contact-------------->
-        <section class="home_contact">
-
-            <article class="home_contact_content">
-
-                <div class="home_contact_txt">
-                    <h2>Dont be shy,<br>
-                        talk to me.</h2>
-                    <p>
-                        I Reply to everyone right away. See for yourself.
-                    </p>
-                    <p class="sayhi">SAY HI</p>
-                    <h3><a href="mailto:hello@amandabetz.com" class="bold txt_light">hello@amandabetz.com</a></h3>
-                </div>
-            </article>
-
-        </section>
-
-    </main>
-
-    <!--Footer-->
-    <footer>
-        <div class="copyright">
-            <p class="bold">&copy; Amanda Betz. 2018 | <a href="#" class="txt_light">Privacy policy</a></p>
-        </div>
-
-        <div class="some">
-            <p>
-                <a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="txt_light"><i class="fab fa-linkedin-in"></i></a>
-            </p>
-        </div>
-
-        <div class="mail">
-            <p><a href="mailto:hello@amandabetz.com" class="bold txt_light">hello@amandabetz.com</a></p>
-        </div>
-
-    </footer>
-
-    <!--Javascript-->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/burger.js"></script>
+	<!--Javascript-->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="js/forside.js"></script>
+	<script src="js/burger.js"></script>
 </body>
 
 </html>
