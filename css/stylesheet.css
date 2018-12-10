@@ -344,6 +344,10 @@ HOME--------------------------
 	margin-top: 100px;
 }
 
+.home_single_product img {
+	cursor: pointer;
+}
+
 .home_description {
 	grid-column: 1 / 3;
 	padding-top: 8%;

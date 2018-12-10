@@ -62,7 +62,7 @@ async function hentJson() {
 	//	contact section
 	dest.querySelector("[data-contact_overskrift]").innerHTML = side.acf.contact_overskrift;
 	dest.querySelector("[data-contact_underrubrik]").textContent = side.acf.contact_underrubrik;
-	dest.querySelector("[data-contact_cta]").textContent = side.acf.contact_cta;
+	dest.querySelector("[data-contact_h1]").textContent = side.acf.contact_hi;
 	dest.querySelector("[data-contact_mail]").textContent = side.acf.contact_mail;
 	dest.querySelector("[data-contact_mail]").href = "mailto:" + side.acf.contact_mail;
 }
@@ -109,6 +109,10 @@ function visProdukter() {
 			klon.querySelector("[data-link]").addEventListener("click", () => {
 				window.location.href = "product.html?p=" + produkt.slug;
 			});
+			//	Link fra billede
+			klon.querySelector("[data-img_link]").addEventListener("click", () => {
+				window.location.href = "product.html?p=" + produkt.slug;
+			});
 
 			//	tilføj html DOM
 			produktContainer.appendChild(klon);
@@ -134,6 +138,10 @@ function visProdukter() {
 			klon.querySelector("[data-link]").addEventListener("click", () => {
 				window.location.href = "product.html?p=" + produkt.slug;
 			});
+			//	Link fra billede
+			klon.querySelector("[data-img_link]").addEventListener("click", () => {
+				window.location.href = "product.html?p=" + produkt.slug;
+			});
 
 			//	tilføj html DOM
 			produktContainer.appendChild(klon);
@@ -157,6 +165,10 @@ function visProdukter() {
 			klon.querySelector("[data-description]").textContent = produkt.acf.short_description;
 			//	Link fra knap
 			klon.querySelector("[data-link]").addEventListener("click", () => {
+				window.location.href = "product.html?p=" + produkt.slug;
+			});
+			//	Link fra billede
+			klon.querySelector("[data-img_link]").addEventListener("click", () => {
 				window.location.href = "product.html?p=" + produkt.slug;
 			});
 
