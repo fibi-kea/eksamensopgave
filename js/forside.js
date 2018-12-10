@@ -33,11 +33,11 @@ async function hentJson() {
 
 	//	indsæt i DOM
 
-	//	Splash
+	//	Splash section
 	dest.querySelector("[data-overskrift]").textContent = side.acf.overskrift;
 	dest.querySelector("[data-underrubrik]").textContent = side.acf.underrubrik;
 
-	//	Produkter - indhent valg
+	//	Produkter section - indhent valg fra WP
 	valg_1 = side.acf.vaelg_produkt_1;
 	valg_2 = side.acf.vaelg_produkt_2;
 	valg_3 = side.acf.vaelg_produkt_3;
@@ -50,10 +50,22 @@ async function hentJson() {
 	//	Indlæs produkter
 	hentJsonProdukter();
 
-	//	about
+	//	about section
+	dest.querySelector("[data-about_overskrift]").textContent = side.acf.about_overskrift;
+	dest.querySelector("[data-about_spalte_1]").textContent = side.acf.about_spalte_1;
+	dest.querySelector("[data-about_spalte_2]").textContent = side.acf.about_spalte_2;
+
+	//	webshop section
+	dest.querySelector("[data-webshop_overskrift]").textContent = side.acf.webshop_overskrift;
+	dest.querySelector("[data-webshop_tekst]").textContent = side.acf.webshop_tekst;
+
+	//	contact section
+	dest.querySelector("[data-contact_overskrift]").textContent = side.acf.contact_overskrift;
+	dest.querySelector("[data-contact_underrubrik]").textContent = side.acf.contact_underrubrik;
+	dest.querySelector("[data-contact_cta]").textContent = side.acf.contact_underrubrik;
+	dest.querySelector("[data-contact_mail]").textContent = side.mail;
+	dest.querySelector("[data-contact_mail]").href = "mailto:" + side.mail;
 }
-
-
 
 //--------------------------- Indlæs produkter ---------------------------------
 
@@ -75,14 +87,15 @@ async function hentJsonProdukter() {
 }
 
 
-//	Indhent produkter
+//	vis produkter
 function visProdukter() {
+
+	//	Filtrer produkter til de 3 valgte på forsiden
 
 	//	Kør loop for produkt 1
 	produkter.forEach(produkt => {
 		console.log(produkt);
 
-		//	Filtrer produkter til de 3 valgte på forsiden
 		if (produkt.id == valg_1) {
 
 			//	Klon? ja tak
@@ -108,7 +121,6 @@ function visProdukter() {
 	produkter.forEach(produkt => {
 		console.log(produkt);
 
-		//	Filtrer produkter til de 3 valgte på forsiden
 		if (produkt.id == valg_2) {
 
 			//	Klon? ja tak
@@ -134,7 +146,6 @@ function visProdukter() {
 	produkter.forEach(produkt => {
 		console.log(produkt);
 
-		//	Filtrer produkter til de 3 valgte på forsiden
 		if (produkt.id == valg_3) {
 
 			//	Klon? ja tak
