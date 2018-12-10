@@ -1,36 +1,44 @@
-//Hent mainpage indhold
-
 //	global var
 let produkter = [];
 let produkt;
-let klon;
 
 let produktTemplate = document.querySelector("[data-produktTemplate]");
 let produktContainer = document.querySelector("[data-produktContainer]");
 
-//vars til valg af produkter
-
+//  vars til valg af produkter
 let valg_1;
 let valg_2;
 let valg_3;
 
-//		dokument DOM loadet
+//	dokument DOM loadet
 document.addEventListener("DOMContentLoaded", hentJson);
 
-//		hent json
+
+
+//--------------------------- Indhent sideindhold til splash & produktvalg ---------------------------------
+
+
+
+//	hent json
 async function hentJson() {
 	console.log("hentJson");
 
 	let pageTemplate = document.querySelector("[data-template]");
 	let pageContainer = document.querySelector("[data-container]");
 
-	//		Hent json-data wordpress content
+	//	Hent json-data wordpress content
 	let jsonData = await fetch("http://imkennykennedy.com/kea/2_semester/tema_eksamen/wordpress/wp-json/wp/v2/pages/542");
 
 	side = await jsonData.json();
 
 	//	test json-import
 	console.log(side);
+
+	//	Klon & indsæt i DOM
+	let klon = pageTemplate.cloneNode(true).content;
+	klon.querySelector("[data-overskrift]").textContent = side.acf.overskrift;
+	klon.querySelector("[data-underrubrik]").textContent = side.acf.underrubrik;
+	pageContainer.appendChild(klon);
 
 	//	Indhent valgt produkter på forsiden
 	valg_1 = side.acf.vaelg_produkt_1;
@@ -41,17 +49,14 @@ async function hentJson() {
 	console.log(valg_1);
 	console.log(valg_2);
 	console.log(valg_3);
-
-	//	Klon & indsæt i DOM
-	let klon = pageTemplate.cloneNode(true).content;
-	klon.querySelector("[data-overskrift]").textContent = side.acf.overskrift;
-	klon.querySelector("[data-underrubrik]").textContent = side.acf.underrubrik;
-	pageContainer.appendChild(klon);
 }
 
-//------------------------------------------------------------
 
-//Hent produkter
+
+//--------------------------- Indhent produkter ---------------------------------
+
+
+
 
 //	dokument DOM loadet
 document.addEventListener("DOMContentLoaded", hentJsonProdukter);
@@ -82,7 +87,7 @@ function visProdukter() {
 		//	Filtrer produkter til de 3 valgte på forsiden
 		if (produkt.id == valg_1) {
 
-			//		Klon? ja tak
+			//	Klon? ja tak
 			let klon = produktTemplate.cloneNode(true).content;
 
 			klon.querySelector("[data-billede]").setAttribute("src", produkt.acf.photo.sizes.medium_large);
@@ -90,7 +95,7 @@ function visProdukter() {
 			klon.querySelector("[data-title]").textContent = produkt.acf.title;
 			klon.querySelector("[data-description]").textContent = produkt.acf.short_description;
 
-			//	    tilføj html DOM
+			//	tilføj html DOM
 			produktContainer.appendChild(klon);
 			console.log("produkt er indlæst");
 		}
@@ -103,7 +108,7 @@ function visProdukter() {
 		//	Filtrer produkter til de 3 valgte på forsiden
 		if (produkt.id == valg_2) {
 
-			//		Klon? ja tak
+			//	Klon? ja tak
 			let klon = produktTemplate.cloneNode(true).content;
 
 			klon.querySelector("[data-billede]").setAttribute("src", produkt.acf.photo.sizes.medium_large);
@@ -111,7 +116,7 @@ function visProdukter() {
 			klon.querySelector("[data-title]").textContent = produkt.acf.title;
 			klon.querySelector("[data-description]").textContent = produkt.acf.short_description;
 
-			//	    tilføj html DOM
+			//	tilføj html DOM
 			produktContainer.appendChild(klon);
 			console.log("produkt er indlæst");
 		}
@@ -124,7 +129,7 @@ function visProdukter() {
 		//	Filtrer produkter til de 3 valgte på forsiden
 		if (produkt.id == valg_3) {
 
-			//		Klon? ja tak
+			//	Klon? ja tak
 			let klon = produktTemplate.cloneNode(true).content;
 
 			klon.querySelector("[data-billede]").setAttribute("src", produkt.acf.photo.sizes.medium_large);
@@ -132,9 +137,13 @@ function visProdukter() {
 			klon.querySelector("[data-title]").textContent = produkt.acf.title;
 			klon.querySelector("[data-description]").textContent = produkt.acf.short_description;
 
-			//	    tilføj html DOM
+			//	tilføj html DOM
 			produktContainer.appendChild(klon);
 			console.log("produkt er indlæst");
 		}
 	});
 }
+
+
+
+//------------------------------------------------------------
