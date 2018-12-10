@@ -94,10 +94,15 @@ function visProdukter() {
 			klon.querySelector("[data-billede]").setAttribute("alt", produkt.acf.short_description);
 			klon.querySelector("[data-title]").textContent = produkt.acf.title;
 			klon.querySelector("[data-description]").textContent = produkt.acf.short_description;
+			//	Link fra knap
+			klon.querySelector("[data-link]").addEventListener("click", () => {
+				window.location.href = "product.html?p=" + produkt.slug;
+			});
 
 			//	tilføj html DOM
 			produktContainer.appendChild(klon);
 			console.log("produkt er indlæst");
+			console.log("produkt-slug er: " + produkt.slug);
 		}
 	});
 
@@ -115,10 +120,15 @@ function visProdukter() {
 			klon.querySelector("[data-billede]").setAttribute("alt", produkt.acf.short_description);
 			klon.querySelector("[data-title]").textContent = produkt.acf.title;
 			klon.querySelector("[data-description]").textContent = produkt.acf.short_description;
+			//	Link fra knap
+			klon.querySelector("[data-link]").addEventListener("click", () => {
+				window.location.href = "product.html?p=" + produkt.slug;
+			});
 
 			//	tilføj html DOM
 			produktContainer.appendChild(klon);
 			console.log("produkt er indlæst");
+			console.log("produkt-slug er: " + produkt.slug);
 		}
 	});
 
@@ -136,10 +146,15 @@ function visProdukter() {
 			klon.querySelector("[data-billede]").setAttribute("alt", produkt.acf.short_description);
 			klon.querySelector("[data-title]").textContent = produkt.acf.title;
 			klon.querySelector("[data-description]").textContent = produkt.acf.short_description;
+			//	Link fra knap
+			klon.querySelector("[data-link]").addEventListener("click", () => {
+				window.location.href = "product.html?p=" + produkt.slug;
+			});
 
 			//	tilføj html DOM
 			produktContainer.appendChild(klon);
 			console.log("produkt er indlæst");
+			console.log("produkt-slug er: " + produkt.slug);
 		}
 	});
 }
