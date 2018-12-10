@@ -52,19 +52,19 @@ async function hentJson() {
 
 	//	about section
 	dest.querySelector("[data-about_overskrift]").textContent = side.acf.about_overskrift;
-	dest.querySelector("[data-about_spalte_1]").textContent = side.acf.about_spalte_1;
-	dest.querySelector("[data-about_spalte_2]").textContent = side.acf.about_spalte_2;
+	dest.querySelector("[data-about_spalte_1]").innerHTML = side.acf.about_spalte_1;
+	dest.querySelector("[data-about_spalte_2]").innerHTML = side.acf.about_spalte_2;
 
 	//	webshop section
 	dest.querySelector("[data-webshop_overskrift]").textContent = side.acf.webshop_overskrift;
-	dest.querySelector("[data-webshop_tekst]").textContent = side.acf.webshop_tekst;
+	dest.querySelector("[data-webshop_tekst]").innerHTML = side.acf.webshop_tekst;
 
 	//	contact section
-	dest.querySelector("[data-contact_overskrift]").textContent = side.acf.contact_overskrift;
+	dest.querySelector("[data-contact_overskrift]").innerHTML = side.acf.contact_overskrift;
 	dest.querySelector("[data-contact_underrubrik]").textContent = side.acf.contact_underrubrik;
-	dest.querySelector("[data-contact_cta]").textContent = side.acf.contact_underrubrik;
-	dest.querySelector("[data-contact_mail]").textContent = side.mail;
-	dest.querySelector("[data-contact_mail]").href = "mailto:" + side.mail;
+	dest.querySelector("[data-contact_cta]").textContent = side.acf.contact_cta;
+	dest.querySelector("[data-contact_mail]").textContent = side.acf.contact_mail;
+	dest.querySelector("[data-contact_mail]").href = "mailto:" + side.acf.contact_mail;
 }
 
 //--------------------------- Indlæs produkter ---------------------------------
