@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da" data-container>
 
 <head>
 	<meta charset="utf-8">
@@ -56,31 +56,23 @@
 
 
 	<main>
-
-		<section data-container>
-
-			<template data-template>
-				<!--------------Splash-------------->
-				<section class="home_splash">
-					<div class="txt_content">
-						<h1 data-overskrift></h1>
-						<p data-underrubrik></p>
-						<p>
-							<a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
-							<a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
-							<a href="#" class="txt_light"><i class="fab fa-linkedin-in"></i></a>
-						</p>
-					</div>
-					<div class="fullscreen-bg">
-						<video loop muted autoplay poster="" class="fullscreen-bg_video hidden">
-							<source src="img/video/lamp.mp4" type="video/mp4">
-						</video>
-					</div>
-				</section>
-
-			</template>
+		<!--------------Splash-------------->
+		<section class="home_splash">
+			<div class="txt_content">
+				<h1 data-overskrift></h1>
+				<p data-underrubrik></p>
+				<p>
+					<a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
+					<a href="#" class="txt_light"><i class="fab fa-linkedin-in"></i></a>
+				</p>
+			</div>
+			<div class="fullscreen-bg">
+				<video loop muted autoplay poster="" class="fullscreen-bg_video hidden">
+					<source src="img/video/lamp.mp4" type="video/mp4">
+				</video>
+			</div>
 		</section>
-
 
 		<!--------------Products-------------->
 		<section class="home_products">
@@ -96,15 +88,86 @@
 
 					<div class="home_description">
 						<h2 data-title></h2>
-						<p data-description>Pendant Lamp inspired by the intricate dome pattern in the Mosque 'Sheikh Lotfollah' in Isfahan, Iran.</p>
+						<p data-description></p>
 
 						<p class="read_more"><img src="img/more_arrow.png" class="arrow" alt="read more" data-link></p>
 					</div>
 				</article>
 			</template>
+
 		</section>
 
+		<!--------------About-------------->
 
+		<div data-restenContainer>
+
+			<section class="home_about">
+
+				<article class="home_about_content">
+					<div class="home_about_header">
+						<h2>Who am I?</h2>
+					</div>
+					<div class="home_about_txt">
+						<p>
+							Amanda Betz is a danish designer, graduated from the Royal Danish Academy of Fine Arts, School of Architecture in 2005 and was awarded the acclaimed VOLA-prize for her final project. Her pendant Shayk has been displayed in the MoMA store in New York and was on the cover of the MoMA Catalogue in April 2015. She is an assistant professor at the Royal Danish Academy of Fine Arts, School of Architecture and has been a jury member for the Danish Design Awards.
+						</p>
+					</div>
+
+					<div class="home_about_txt2">
+						<p>
+							Amanda Betz works in the intersection of art, design and architecture, with a special interest in light, space and the span between two and three dimensions. Her design tends to reflect architecture as fragments of buildings, and she has garnered both local and international acclaim for her ability to capture complexity in a simple object.
+						</p>
+						<p class="read_more"><img src="img/more_arrow.png" class="arrow" alt="read more"></p>
+					</div>
+				</article>
+
+			</section>
+
+			<!--------------Webshop-------------->
+			<div class="bg_color">
+				<section class="home_webshop">
+					<article class="home_webshop_content">
+						<div class="home_webshop_description">
+							<h2>Online store</h2>
+							<p>
+								My focus on design is that of art, aesthetics and purity,
+								with a special interest in light, space and the span
+								between two and three dimensions.
+							</p>
+
+							<p>
+								Here you can find all my newest design i paper,
+								3d-patterns folds, decorations i brass and wood.
+							</p>
+						</div>
+
+						<div class="home_webshop_product">
+							<img src="img/papirdummy.png" class="home_webshop_img" alt="">
+						</div>
+
+						<button onclick="location.href='http://www.example.com'" type="button">Go to store</button>
+					</article>
+				</section>
+			</div>
+
+			<!--------------Contact-------------->
+			<section class="home_contact">
+
+				<article class="home_contact_content">
+
+					<div class="home_contact_txt">
+						<h2>Dont be shy,<br>
+							talk to me.</h2>
+						<p>
+							I Reply to everyone right away. See for yourself.
+						</p>
+						<p class="sayhi">SAY HI</p>
+						<h3><a href="mailto:hello@amandabetz.com" class="bold txt_light">hello@amandabetz.com</a></h3>
+					</div>
+				</article>
+
+			</section>
+		</div>
 
 	</main>
 
