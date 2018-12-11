@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -84,7 +85,7 @@
             <div class="content" data-produktContainer></div>
 
             <template data-produktTemplate>
-                <article class="home_single_product">
+                <article data-aos="fade-up" data-aos-duration="500" class="home_single_product">
                     <div class="home_product">
                         <img src="" class="single_product_img" alt="" data-billede data-img_link>
                     </div>
@@ -102,7 +103,7 @@
 
         <!--------------About-------------->
 
-        <section class="home_about">
+        <section data-aos="fade-up" data-aos-duration="500" class="home_about">
 
             <article class="home_about_content">
                 <div class="home_about_header">
@@ -122,7 +123,7 @@
 
         <!--------------Webshop-------------->
         <div class="bg_color">
-            <section class="home_webshop">
+            <section data-aos="fade-up" data-aos-duration="500" class="home_webshop">
                 <article class="home_webshop_content">
                     <div class="home_webshop_description">
                         <h2 data-webshop_overskrift></h2>
@@ -141,7 +142,7 @@
         </div>
 
         <!--------------Contact-------------->
-        <section class="home_contact">
+        <section data-aos="fade-up" data-aos-duration="500" class="home_contact">
 
             <article class="home_contact_content">
 
@@ -185,6 +186,11 @@
     <script src="js/burger.js"></script>
     <script src="js/scrolltop.js"></script>
     <script src="js/forside.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+    </script>
 </body>
 
 </html>
