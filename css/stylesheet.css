@@ -542,6 +542,8 @@ HOME--------------------------
 /* ---------------------------- */
 
 /*Contact*/
+.fixed_footer footer {}
+
 .home_contact {
     max-width: 1000px;
     margin: auto;
@@ -563,6 +565,7 @@ HOME--------------------------
     margin-top: 140px;
     margin-bottom: 140px;
     grid-gap: 30px;
+    height: 100vh;
 }
 
 .home_contact_txt {
@@ -702,6 +705,16 @@ PRODUCTS--------------------------
 
 CONTACT--------------------------
 */
+
+.fixed_footer {}
+
+
+.contact_margin {}
+
+.footer_wrapper {}
+
+.footer_fixed {}
+
 .contact_container {
     max-width: 800px;
     margin: auto;
