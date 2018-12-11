@@ -62,7 +62,8 @@ async function hentJson() {
 	//	contact section
 	dest.querySelector("[data-contact_overskrift]").innerHTML = side.acf.contact_overskrift;
 	dest.querySelector("[data-contact_underrubrik]").textContent = side.acf.contact_underrubrik;
-	dest.querySelector("[data-contact_h1]").textContent = side.acf.contact_hi;
+	dest.querySelector("[data-contact_hi]").textContent = side.acf.contact_hi;
+	console.log(side.acf.contact_hi);
 	dest.querySelector("[data-contact_mail]").textContent = side.acf.contact_mail;
 	dest.querySelector("[data-contact_mail]").href = "mailto:" + side.acf.contact_mail;
 }
@@ -103,7 +104,7 @@ function visProdukter() {
 
 			klon.querySelector("[data-billede]").setAttribute("src", produkt.acf.photo.sizes.medium_large);
 			klon.querySelector("[data-billede]").setAttribute("alt", produkt.acf.short_description);
-			klon.querySelector("[data-title]").textContent = produkt.acf.title;
+			klon.querySelector("[data-title]").textContent = produkt.title.rendered;
 			klon.querySelector("[data-description]").textContent = produkt.acf.short_description;
 			//	Link fra knap
 			klon.querySelector("[data-link]").addEventListener("click", () => {
@@ -132,7 +133,7 @@ function visProdukter() {
 
 			klon.querySelector("[data-billede]").setAttribute("src", produkt.acf.photo.sizes.medium_large);
 			klon.querySelector("[data-billede]").setAttribute("alt", produkt.acf.short_description);
-			klon.querySelector("[data-title]").textContent = produkt.acf.title;
+			klon.querySelector("[data-title]").textContent = produkt.title.rendered;
 			klon.querySelector("[data-description]").textContent = produkt.acf.short_description;
 			//	Link fra knap
 			klon.querySelector("[data-link]").addEventListener("click", () => {
@@ -161,7 +162,7 @@ function visProdukter() {
 
 			klon.querySelector("[data-billede]").setAttribute("src", produkt.acf.photo.sizes.medium_large);
 			klon.querySelector("[data-billede]").setAttribute("alt", produkt.acf.short_description);
-			klon.querySelector("[data-title]").textContent = produkt.acf.title;
+			klon.querySelector("[data-title]").textContent = produkt.title.rendered;
 			klon.querySelector("[data-description]").textContent = produkt.acf.short_description;
 			//	Link fra knap
 			klon.querySelector("[data-link]").addEventListener("click", () => {

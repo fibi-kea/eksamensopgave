@@ -75,7 +75,7 @@ function visProdukter() {
 
 		klon.querySelector("[data-billede]").setAttribute("src", produkt.acf.photo.sizes.medium_large);
 		klon.querySelector("[data-billede]").setAttribute("alt", produkt.acf.short_description);
-		klon.querySelector("[data-title]").textContent = produkt.acf.title;
+		klon.querySelector("[data-title]").textContent = produkt.title.rendered;
 		klon.querySelector("[data-material]").textContent = produkt.acf.material;
 
 		//	tilføj html DOM
