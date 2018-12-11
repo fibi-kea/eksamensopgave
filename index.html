@@ -1,17 +1,23 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
+=======
+<html lang="da" data-container>
+>>>>>>> origin/master
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Amanda Betz | Home | Design, art & crafts</title>
+	<meta name="description" content="Beskriv hvad siden handler om med brug af gode keyword. - 150 - 170 tegn.">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body>
 
+<<<<<<< HEAD
     <!--Header-->
     <div class="head_bg"></div>
     <header>
@@ -220,6 +226,173 @@
     <script src="js/main.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/scrolltop.js"></script>
+=======
+	<!--Header-->
+	<div class="head_bg"></div>
+	<header>
+		<a href="index.html">
+			<div class="logo"></div>
+		</a>
+
+		<!--Burger menu start-->
+		<div class="burger">
+			<!--bar 1-->
+			<div class="bar1"></div>
+
+			<!--bar 2-->
+			<div class="bar2"></div>
+
+			<!--bar 3-->
+			<div class="bar3"></div>
+		</div>
+
+		<!--Burger menu end-->
+
+		<!--Dropdown menu on click-->
+		<nav>
+			<ul>
+				<li><a href="index.html">News</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="webshop.html">Store</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+
+			<!--Search bar-->
+			<div class="search-container">
+				<form action="/action_page.php">
+					<div class="search_icon"></div>
+					<input type="text" placeholder="Search.." id="search" name="search">
+				</form>
+			</div>
+		</nav>
+	</header>
+
+
+	<main>
+		<!--------------Splash-------------->
+		<section class="home_splash">
+			<div class="txt_content">
+				<h1 data-overskrift></h1>
+				<p data-underrubrik></p>
+				<p>
+					<a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
+					<a href="#" class="txt_light"><i class="fab fa-linkedin-in"></i></a>
+				</p>
+			</div>
+			<div class="fullscreen-bg">
+				<video loop muted autoplay poster="" class="fullscreen-bg_video hidden">
+					<source src="img/video/lamp.mp4" type="video/mp4">
+				</video>
+			</div>
+		</section>
+
+		<!--------------Products-------------->
+		<section class="home_products">
+
+			<!--events fra wordpress-->
+			<div class="content" data-produktContainer></div>
+
+			<template data-produktTemplate>
+				<article class="home_single_product">
+					<div class="home_product">
+						<img src="" class="single_product_img" alt="" data-billede data-img_link>
+					</div>
+
+					<div class="home_description">
+						<h2 data-title></h2>
+						<p data-description></p>
+
+						<p class="read_more"><img src="img/more_arrow.png" class="arrow" alt="read more" data-link></p>
+					</div>
+				</article>
+			</template>
+
+		</section>
+
+		<!--------------About-------------->
+
+		<section class="home_about">
+
+			<article class="home_about_content">
+				<div class="home_about_header">
+					<h2 data-about_overskrift></h2>
+				</div>
+				<div class="home_about_txt">
+					<p data-about_spalte_1></p>
+				</div>
+
+				<div class="home_about_txt2">
+					<p data-about_spalte_2></p>
+					<p class="read_more"><a href="about.html"><img src="img/more_arrow.png" class="arrow" alt="read more"></a></p>
+				</div>
+			</article>
+
+		</section>
+
+		<!--------------Webshop-------------->
+		<div class="bg_color">
+			<section class="home_webshop">
+				<article class="home_webshop_content">
+					<div class="home_webshop_description">
+						<h2 data-webshop_overskrift></h2>
+						<div>
+							<p data-webshop_tekst></p>
+						</div>
+					</div>
+
+					<div class="home_webshop_product">
+						<img src="img/papirdummy.png" class="home_webshop_img" alt="">
+					</div>
+
+					<button onclick="location.href='http://www.example.com'" type="button">Go to store</button>
+				</article>
+			</section>
+		</div>
+
+		<!--------------Contact-------------->
+		<section class="home_contact">
+
+			<article class="home_contact_content">
+
+				<div class="home_contact_txt">
+					<h2 data-contact_overskrift></h2>
+					<p data-contact_underrubrik></p>
+					<p class="sayhi" data-contact_hi></p>
+					<h3><a href="mailto:hello@amandabetz.com" class="bold txt_light" data-contact_mail>hello@amandabetz.com</a></h3>
+				</div>
+			</article>
+
+		</section>
+
+	</main>
+
+	<!--Footer-->
+	<footer>
+		<div class="copyright">
+			<p class="bold">&copy; Amanda Betz. 2018 | <a href="#" class="txt_light">Privacy policy</a></p>
+		</div>
+
+		<div class="some">
+			<p>
+				<a href="#" class="txt_light"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="txt_light"><i class="fab fa-instagram"></i></a>
+				<a href="#" class="txt_light"><i class="fab fa-linkedin-in"></i></a>
+			</p>
+		</div>
+
+		<div class="mail">
+			<p><a href="mailto:hello@amandabetz.com" class="bold txt_light">hello@amandabetz.com</a></p>
+		</div>
+
+	</footer>
+
+	<!--Javascript-->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="js/forside.js"></script>
+	<script src="js/burger.js"></script>
+>>>>>>> origin/master
 </body>
 
 </html>
