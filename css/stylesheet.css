@@ -304,6 +304,7 @@ header input::placeholder {
 main {
     width: 100%;
     margin-top: 20px;
+    position: relative;
 }
 
 
@@ -602,18 +603,6 @@ HOME--------------------------
 
 PRODUCTS--------------------------
 */
-/*splash*/
-.products_splash {
-    overflow: hidden;
-    height: 400px;
-    position: relative;
-    margin: 40px;
-}
-
-.products_splash img {
-    width: 100%;
-}
-
 /*Products Container*/
 .products_container {
     display: grid;
@@ -740,6 +729,61 @@ PRODUCTS--------------------------
 .product_full_img img {
     width: 100%;
     margin-bottom: 40px;
+}
+
+/*Sidenav*/
+.sidenav {
+    position: fixed;
+    right: 40px;
+    top: 120px;
+}
+
+.sidenav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav li {
+    cursor: pointer;
+    display: inline-block
+}
+
+.sidenav a {
+    font-size: 1.2rem;
+    line-height: 0.2rem;
+    margin: 0;
+    padding: 0;
+    color: var(--txt);
+    text-decoration: none;
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.sidenav a:hover {
+    color: var(--bg_03);
+    transition: 0.5s ease;
+    font-weight: bold;
+}
+
+.sidenav a::before {
+    display: block;
+    content: '';
+    width: 2px;
+    height: 2px;
+    background: var(--bg_03);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    opacity: 0;
+
+    transition: 0.5s;
+}
+
+.sidenav a:hover:before {
+    width: 100%;
+    transition: 0.5s;
+    opacity: 1;
 }
 
 /*
