@@ -106,7 +106,7 @@ function visProduktMenu() {
 
 		//	tilføj html DOM
 		sidenavContainer.appendChild(klon);
-		console.log("produkt er indlæst");
-		console.log("produkt-slug er: " + produkt.slug);
+		console.log("menupunkt er indlæst");
+		console.log("menupunkt-slug er: " + produkt.slug);
 	});
 }
