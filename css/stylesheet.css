@@ -610,7 +610,7 @@ PRODUCTS--------------------------
     grid-column-gap: 12vw;
     grid-row-gap: 14vw;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 15vw;
     max-width: 80%;
     position: relative;
     margin-top: 150px;
@@ -635,14 +635,12 @@ PRODUCTS--------------------------
 
 .product_thumbnail {
     overflow: hidden;
-    height: 80vw;
+    height: 100vw;
 }
 
 .product_thumbnail img {
     display: block;
     width: 100%;
-    height: 100vw;
-    object-fit: cover;
 }
 
 .product_info {}
@@ -672,11 +670,10 @@ PRODUCTS--------------------------
     transition: 0.5s ease;
 }
 
-.product_read_more a {
+.product_read_more p {
     font-size: 30px;
-    line-height: 44px;
+    line-height: 45px;
     font-weight: normal;
-    padding: 5px;
     color: white;
 }
 
@@ -732,10 +729,63 @@ PRODUCTS--------------------------
 }
 
 /*Sidenav*/
+.sidelist {
+    cursor: pointer;
+    border: none;
+    position: fixed;
+    top: 100px;
+    left: 45px;
+    z-index: 888;
+}
+
+.listbar1,
+.listbar2,
+.listbar3,
+.listbar4,
+.listbar5,
+.listbar6 {
+    height: 3px;
+    margin: 8px 0;
+}
+
+.listbar1 {
+    background-color: var(--txt);
+    width: 3px;
+    border-radius: 2px;
+}
+
+.listbar2 {
+    background-color: var(--txt);
+    width: 30px;
+}
+
+.listbar3 {
+    background-color: var(--txt);
+    width: 3px;
+    border-radius: 2px;
+}
+
+.listbar4 {
+    background-color: var(--txt);
+    width: 30px;
+}
+
+.listbar5 {
+    background-color: var(--txt);
+    width: 3px;
+    border-radius: 2px;
+}
+
+.listbar6 {
+    background-color: var(--txt);
+    width: 30px;
+}
+
+
 .sidenav {
     position: fixed;
-    right: 40px;
-    top: 120px;
+    left: 40px;
+    top: 155px;
 }
 
 .sidenav ul {
@@ -745,43 +795,39 @@ PRODUCTS--------------------------
 }
 
 .sidenav li {
-    cursor: pointer;
-    display: inline-block
-}
-
-.sidenav a {
     font-size: 1.2rem;
     line-height: 0.2rem;
-    margin: 0;
+    margin-bottom: 3rem;
     padding: 0;
     color: var(--txt);
     text-decoration: none;
     transition: 0.5s ease;
     position: relative;
+    cursor: pointer;
 }
 
-.sidenav a:hover {
+.sidenav li:hover {
     color: var(--bg_03);
     transition: 0.5s ease;
     font-weight: bold;
 }
 
-.sidenav a::before {
+.sidenav li::before {
     display: block;
     content: '';
-    width: 2px;
+    width: 1px;
     height: 2px;
     background: var(--bg_03);
     position: absolute;
-    bottom: -5px;
+    bottom: -10px;
     left: 0;
     opacity: 0;
 
     transition: 0.5s;
 }
 
-.sidenav a:hover:before {
-    width: 100%;
+.sidenav li:hover:before {
+    width: 40px;
     transition: 0.5s;
     opacity: 1;
 }
