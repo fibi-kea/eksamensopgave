@@ -5,10 +5,8 @@ let produkt;
 let produktTemplate = document.querySelector("[data-produktTemplate]");
 let produktContainer = document.querySelector("[data-produktContainer]");
 
-//  vars til valg af produkter
-let valg_1;
-let valg_2;
-let valg_3;
+let sidenavTemplate = document.querySelector("[data-sidenavTemplate]");
+let sidenavContainer = document.querySelector("[data-sidenavContainer]");
 
 //	dokument DOM loadet
 document.addEventListener("DOMContentLoaded", hentJson);
@@ -54,6 +52,8 @@ async function hentJsonProdukter() {
 	console.log(produkter);
 
 	visProdukter();
+
+	visProduktMenu();
 }
 
 
@@ -69,17 +69,43 @@ function visProdukter() {
 		//	Klon? ja tak
 		let klon = produktTemplate.cloneNode(true).content;
 
+
+		klon.querySelector("[data-goto]").setAttribute("id", produkt.slug);
 		klon.querySelector("[data-link_all]").addEventListener("click", () => {
 			window.location.href = "product.html?p=" + produkt.slug;
 		});
-
 		klon.querySelector("[data-billede]").setAttribute("src", produkt.acf.photo.sizes.medium_large);
 		klon.querySelector("[data-billede]").setAttribute("alt", produkt.acf.short_description);
 		klon.querySelector("[data-title]").textContent = produkt.title.rendered;
 		klon.querySelector("[data-material]").textContent = produkt.acf.material;
+		klon.querySelector("[data-pluslink]").addEventListener("click", () => {
+			window.location.href = "product.html?p=" + produkt.slug;
+		});
 
 		//	tilføj html DOM
 		produktContainer.appendChild(klon);
+		console.log("produkt er indlæst");
+		console.log("produkt-slug er: " + produkt.slug);
+	});
+}
+
+//	vis produktmenu
+function visProduktMenu() {
+
+	//	Kør loop for produkt 1
+	produkter.forEach(produkt => {
+		console.log(produkt);
+
+		//	Klon? ja tak
+		let klon = sidenavTemplate.cloneNode(true).content;
+
+		klon.querySelector("[data-sidenav_title]").textContent = produkt.title.rendered;
+		klon.querySelector("[data-sidenav_link]").addEventListener("click", () => {
+			window.location.href = "#" + produkt.slug;
+		});
+
+		//	tilføj html DOM
+		sidenavContainer.appendChild(klon);
 		console.log("produkt er indlæst");
 		console.log("produkt-slug er: " + produkt.slug);
 	});
