@@ -42,7 +42,7 @@
 
 				//	indsæt i DOM
 
-				dest.querySelector("[data-seo_title]").textContent = produkt.title.rendered;
+				dest.querySelector("[data-seo_title]").textContent = "produkcts | " + produkt.title.rendered;
 				dest.querySelector("[data-seo_description]").setAttribute("content", produkt.acf.seo_description);
 				dest.querySelector("[data-title]").textContent = produkt.title.rendered;
 				dest.querySelector("[data-designed_for]").textContent = produkt.acf.designed_for;
