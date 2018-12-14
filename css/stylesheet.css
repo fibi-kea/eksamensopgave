@@ -7,11 +7,10 @@
     --body: #ffffff;
 
     --bg_01: #fafafa;
-    --bg_02: #6b9aab;
-    --bg_03: #f78877;
+    --bg_02: #8aa1ad;
+    --bg_03: #ca8681;
     --bg_04: #034760;
-    --bg_05: #d64d41;
-    --bg_06: #2b1215;
+    --bg_05: #d2554d;
     --contact: #6b9aab;
     --input: hotpink;
 }
@@ -643,6 +642,11 @@ PRODUCTS--------------------------
 }
 
 .product_info {}
+
+.product_material::before {
+    content: "Material: ";
+    font-weight: bold;
+}
 
 .underline {
     height: 2px;
