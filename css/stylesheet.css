@@ -610,7 +610,7 @@ PRODUCTS--------------------------
     grid-column-gap: 12vw;
     grid-row-gap: 14vw;
     margin-left: auto;
-    margin-right: 15vw;
+    margin-right: auto;
     max-width: 80%;
     position: relative;
     margin-top: 150px;
@@ -635,11 +635,10 @@ PRODUCTS--------------------------
 
 .product_thumbnail {
     overflow: hidden;
-    height: 100vw;
+    height: 80vw;
 }
 
 .product_thumbnail img {
-    display: block;
     width: 100%;
 }
 
@@ -736,49 +735,11 @@ PRODUCTS--------------------------
     top: 100px;
     left: 45px;
     z-index: 888;
-}
-
-.listbar1,
-.listbar2,
-.listbar3,
-.listbar4,
-.listbar5,
-.listbar6 {
-    height: 3px;
-    margin: 8px 0;
-}
-
-.listbar1 {
-    background-color: var(--txt);
-    width: 3px;
-    border-radius: 2px;
-}
-
-.listbar2 {
-    background-color: var(--txt);
-    width: 30px;
-}
-
-.listbar3 {
-    background-color: var(--txt);
-    width: 3px;
-    border-radius: 2px;
-}
-
-.listbar4 {
-    background-color: var(--txt);
-    width: 30px;
-}
-
-.listbar5 {
-    background-color: var(--txt);
-    width: 3px;
-    border-radius: 2px;
-}
-
-.listbar6 {
-    background-color: var(--txt);
-    width: 30px;
+    display: grid;
+    grid-template-columns: repeat(1fr 1fr);
+    grid-column-gap: 3px;
+    grid-row-gap: 4px;
+    background: white;
 }
 
 
@@ -786,6 +747,10 @@ PRODUCTS--------------------------
     position: fixed;
     left: 40px;
     top: 155px;
+    height: 0px;
+    z-index: 777;
+    background: white;
+    overflow: hidden;
 }
 
 .sidenav ul {
@@ -796,8 +761,7 @@ PRODUCTS--------------------------
 
 .sidenav li {
     font-size: 1.2rem;
-    line-height: 0.2rem;
-    margin-bottom: 3rem;
+    line-height: 3rem;
     padding: 0;
     color: var(--txt);
     text-decoration: none;
@@ -1452,10 +1416,19 @@ a:nth-child(2) .fab {
 
 
     /*Products Container*/
+    .sidenav {
+        left: 40px;
+        top: 145px;
+        height: 100%;
+        padding: 0px;
+        padding-top: 10px;
+    }
+
     .products_container {
         grid-row-gap: 7vw;
         max-width: 60%;
         margin-top: 150px;
+        margin-right: 15vw;
     }
 
     .single_product {
@@ -1477,11 +1450,6 @@ a:nth-child(2) .fab {
 
     .product_thumbnail {
         height: 30vw;
-    }
-
-    .product_thumbnail img {
-        height: 50vw;
-        margin-top: -40%;
     }
 
     .product_read_more {
