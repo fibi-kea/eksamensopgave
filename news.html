@@ -59,19 +59,19 @@
 	<main>
 		<!--news fra wordpress-->
 		<section class="news_container" data-newsContainer>
-
-			<template data-newsTemplate>
-				<article data-aos="fade-up" data-aos-duration="400" class="single_news" data-link_all>
-					<div class="news_thumbnail"><img src="img/amanda.jpg" class="" alt="" data-billede></div>
-					<div class="news_intro">
-						<p class="date" data-dato>10.11.18</p>
-						<h2 data-title>Heading</h2>
-						<p data-short_description></p>
-					</div>
-				</article>
-			</template>
 		</section>
 	</main>
+
+	<template data-newsTemplate>
+		<article data-aos="fade-up" data-aos-duration="400" class="single_news" data-link_all>
+			<div class="news_thumbnail"><img src="img/amanda.jpg" class="" alt="" data-billede></div>
+			<div class="news_intro">
+				<p class="date" data-dato>10.11.18</p>
+				<h2 data-title>Heading</h2>
+				<p data-short_description></p>
+			</div>
+		</article>
+	</template>
 
 	<!--Scroll to top button-->
 	<a href="#0" class="cd-top js-cd-top">Top</a>
@@ -105,6 +105,7 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
 		AOS.init();
+
 	</script>
 </body>
 
