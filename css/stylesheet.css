@@ -612,7 +612,6 @@ PRODUCTS--------------------------
     margin-right: auto;
     max-width: 80%;
     position: relative;
-    margin-top: 150px;
 }
 
 .products_container p {
@@ -685,6 +684,69 @@ PRODUCTS--------------------------
     transition: 0.5s ease;
 }
 
+/*---Collapse---*/
+/*Collapse*/
+.product-catagory {
+    max-width: 80%;
+    margin: 150px auto 0px auto;
+}
+
+.product-catagory .collapsible {
+    color: var(--txt_light);
+    background-color: white;
+    cursor: pointer;
+    padding: 18px 0px 18px 0px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+
+    border-top-color: var(--txt);
+    border-top-style: solid;
+    border-top-width: 1px;
+
+    margin: 0;
+    width: 100%;
+}
+
+.product-catagory .collapsible:nth-last-child(2) {
+    border-bottom-color: var(--txt);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.product-catagory .active,
+.collapsible:hover {
+    background-color: var(--bg_02);
+    color: white;
+    padding-left: 5px;
+}
+
+.product-catagory .collapsible:after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    padding-right: 5px;
+}
+
+.product-catagory .active:after {
+    content: "\2212";
+    color: white;
+}
+
+.product-catagory .collapse_content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.product-catagory .collapse_content p:first-child {
+    margin-top: 20px;
+}
+
 
 /*---SINGLE PRODUCT---*/
 .single_product_container {
@@ -732,30 +794,10 @@ PRODUCTS--------------------------
 }
 
 /*Sidenav*/
-.sidelist {
-    cursor: pointer;
-    border: none;
-    position: fixed;
-    top: 100px;
-    left: 45px;
-    z-index: 888;
-    display: grid;
-    grid-template-columns: repeat(1fr 1fr);
-    grid-column-gap: 3px;
-    grid-row-gap: 4px;
-    background: white;
-}
+.sidelist {}
 
 
-.sidenav {
-    position: fixed;
-    left: 40px;
-    top: 155px;
-    height: 0px;
-    z-index: 777;
-    background: white;
-    overflow: hidden;
-}
+.sidenav {}
 
 .sidenav ul {
     list-style: none;
@@ -1066,7 +1108,7 @@ ABOUT--------------------------
 }
 
 /*Collapse*/
-.collapsible {
+.about_container .collapsible {
     color: var(--txt_light);
     background-color: white;
     cursor: pointer;
@@ -1082,20 +1124,20 @@ ABOUT--------------------------
     border-top-width: 1px;
 }
 
-.collapsible:nth-last-child(2) {
+.about_container .collapsible:nth-last-child(2) {
     border-bottom-color: var(--txt);
     border-bottom-style: solid;
     border-bottom-width: 1px;
 }
 
-.active,
+.about_container .active,
 .collapsible:hover {
     background-color: var(--bg_02);
     color: white;
     padding-left: 5px;
 }
 
-.collapsible:after {
+.about_container .collapsible:after {
     content: '\002B';
     color: black;
     font-weight: bold;
@@ -1104,19 +1146,19 @@ ABOUT--------------------------
     padding-right: 5px;
 }
 
-.active:after {
+.about_container .active:after {
     content: "\2212";
     color: white;
 }
 
-.collapse_content {
+.about_container .collapse_content {
     padding: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
 
-.collapse_content p:first-child {
+.about_container .collapse_content p:first-child {
     margin-top: 20px;
 }
 
@@ -1423,19 +1465,10 @@ a:nth-child(2) .fab {
 
 
     /*Products Container*/
-    .sidenav {
-        left: 40px;
-        top: 145px;
-        height: 100%;
-        padding: 0px;
-        padding-top: 10px;
-    }
-
     .products_container {
         grid-row-gap: 7vw;
         max-width: 60%;
-        margin-top: 150px;
-        margin-right: 15vw;
+        margin-top: 50px;
     }
 
     .single_product {
