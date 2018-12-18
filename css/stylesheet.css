@@ -1146,7 +1146,10 @@ NEWS--------------------------
     grid-column: 1 / 1;
 }
 
-.news_thumbnail {}
+.news_thumbnail {
+    overflow: hidden;
+    max-height: 500px;
+}
 
 .news_intro {}
 
@@ -1509,9 +1512,17 @@ a:nth-child(2) .fab {
 
     .article_full_img {
         max-height: 500px;
+        height: 500px;
         overflow: hidden;
         margin-bottom: 40px;
+        position: relative;
     }
+
+    .article_full_img img {
+        position: absolute;
+        top: -50%;
+    }
+
 }
 
 /*- - - - - - - - - - - - - media queries 890px - - - - - - - - - - - - -*/
