@@ -1511,6 +1511,14 @@ a:nth-child(2) .fab {
         max-height: 500px;
         overflow: hidden;
         margin-bottom: 40px;
+        position: relative;
+        height: 500px;
+    }
+
+    .article_full_img img {
+        overflow: hidden;
+        position: absolute;
+        top: -50%;
     }
 }
 
