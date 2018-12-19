@@ -646,6 +646,7 @@ PRODUCTS--------------------------
     margin-right: auto;
     max-width: 80%;
     position: relative;
+    margin-top: 150px;
 }
 
 .products_container p {
@@ -721,15 +722,20 @@ PRODUCTS--------------------------
 /*---Collapse---*/
 /*Collapse*/
 .product-catagory {
-    max-width: 80%;
-    margin: 150px auto 0px auto;
+    margin: 100px auto 0px auto;
+    width: 160px;
+    position: fixed;
+    top: -20px;
+    right: 40px;
+    z-index: 999;
+    transition: 0.5s;
 }
 
 .product-catagory .collapsible {
-    color: var(--txt_light);
+    color: var(--txt);
     background-color: white;
     cursor: pointer;
-    padding: 18px 0px 18px 0px;
+    padding: 10px 0px 10px 7px;
     border: none;
     text-align: left;
     outline: none;
@@ -751,14 +757,19 @@ PRODUCTS--------------------------
 
 .product-catagory .active,
 .collapsible:hover {
-    background-color: var(--bg_02);
-    color: white;
+    background: var(--bg_03);
+    color: var(txt);
     padding-left: 5px;
+}
+
+.product-catagory .collapsible:hover {
+    background: var(--bg_03);
+    color: var(txt);
 }
 
 .product-catagory .collapsible:after {
     content: '\002B';
-    color: black;
+    color: var(txt);
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -767,7 +778,7 @@ PRODUCTS--------------------------
 
 .product-catagory .active:after {
     content: "\2212";
-    color: white;
+    color: var(txt);
 }
 
 .product-catagory .collapse_content {
@@ -832,13 +843,15 @@ PRODUCTS--------------------------
 .sidenav ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background: white;
 }
 
 .sidenav li {
-    font-size: 1.2rem;
-    line-height: 3rem;
-    padding: 0;
+    font-size: 1.4rem;
+    line-height: 3.4rem;
+    padding-left: 7px;
     color: var(--txt);
     text-decoration: none;
     transition: 0.5s ease;
@@ -859,8 +872,8 @@ PRODUCTS--------------------------
     height: 2px;
     background: var(--bg_03);
     position: absolute;
-    bottom: -10px;
-    left: 0;
+    bottom: 3px;
+    left: 7px;
     opacity: 0;
 
     transition: 0.5s;
@@ -1169,7 +1182,7 @@ ABOUT--------------------------
 
 .about_container .collapsible:after {
     content: '\002B';
-    color: black;
+    color: var(txt);
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -1498,7 +1511,7 @@ a:nth-child(2) .fab {
     .products_container {
         grid-row-gap: 7vw;
         max-width: 60%;
-        margin-top: 50px;
+        margin-top: 150px;
     }
 
     .single_product {
