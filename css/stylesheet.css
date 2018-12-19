@@ -310,11 +310,45 @@ main {
 
 /*
 
+/* BREADCRUMBS */
+.page__section {
+    margin-top: 100px;
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+ul.breadcrumb {
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 1.4rem;
+}
+
+ul.breadcrumb li + li:before {
+    padding: 8px;
+    color: var(--txt_light);
+    content: "\203A";
+}
+
+ul.breadcrumb li a {
+    color: var(--txt_light);
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: var(--txt);
+}
+
+/* ---------------------------- */
 
 
 
-HOME--------------------------
-*/
+HOME-------------------------- */
+
 /*Splash*/
 .home_splash {
     display: grid;
@@ -750,7 +784,7 @@ PRODUCTS--------------------------
 
 /*---SINGLE PRODUCT---*/
 .single_product_container {
-    margin: 200px auto 0px auto;
+    margin: 50px auto 0px auto;
     max-width: 1024px;
     padding: 0px 40px 0px 40px;
 }
