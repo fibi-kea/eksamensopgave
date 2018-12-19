@@ -50,6 +50,10 @@ async function hentJson() {
 	//	Indlæs produkter
 	hentJsonProdukter();
 
+	//	SEO title & description
+	dest.querySelector("[data-seo_title]").textContent = side.title.rendered;
+	dest.querySelector("[data-seo_description]").setAttribute("content", side.acf.seo_description);
+
 	//	about section
 	dest.querySelector("[data-about_overskrift]").textContent = side.acf.about_overskrift;
 	dest.querySelector("[data-about_spalte_1]").innerHTML = side.acf.about_spalte_1;

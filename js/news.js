@@ -17,7 +17,7 @@ async function hentJson() {
 	console.log("hentJson");
 
 	//	Hent json-data wordpress content
-	let jsonData = await fetch("http://imkennykennedy.com/kea/2_semester/tema_eksamen/wordpress/wp-json/wp/v2/pages/654");
+	let jsonData = await fetch("http://imkennykennedy.com/kea/2_semester/tema_eksamen/wordpress/wp-json/wp/v2/pages/735");
 
 	let side = await jsonData.json();
 
@@ -28,7 +28,9 @@ async function hentJson() {
 
 	//	indsæt i DOM
 
-	//	dest.querySelector("[data-overskrift]").textContent = side.acf.overskrift;
+	//	SEO title & description
+	dest.querySelector("[data-seo_title]").textContent = "produkcts | " + side.title.rendered;
+	dest.querySelector("[data-seo_description]").setAttribute("content", side.acf.seo_description);
 
 	hentJsonNews();
 }

@@ -7,7 +7,6 @@
 
 	let news;
 
-
 	//	dokument DOM loadet
 	document.addEventListener("DOMContentLoaded", hentJson);
 

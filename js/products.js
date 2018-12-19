@@ -31,7 +31,9 @@ async function hentJson() {
 
 	//	indsæt i DOM
 
-	//	dest.querySelector("[data-overskrift]").textContent = side.acf.overskrift;
+	//	SEO title & description
+	dest.querySelector("[data-seo_title]").textContent = side.title.rendered;
+	dest.querySelector("[data-seo_description]").setAttribute("content", side.acf.seo_description);
 
 	hentJsonProdukter();
 }
