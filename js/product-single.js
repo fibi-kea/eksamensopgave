@@ -50,6 +50,7 @@
 				dest.querySelector("[data-photo_by]").textContent = produkt.acf.photo_by;
 				dest.querySelector("[data-billede]").setAttribute("src", produkt.acf.photo.sizes.medium_large);
 				dest.querySelector("[data-billede]").setAttribute("alt", produkt.acf.short_description);
+				dest.querySelector("[data-stirub]").textContent = produkt.title.rendered;
 
 				// hentet ind
 				console.log("produktet er hentet ind");

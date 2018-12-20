@@ -48,6 +48,7 @@
 				dest.querySelector("[data-dato]").textContent = news_item.acf.dato_picker;
 				dest.querySelector("[data-title]").textContent = news_item.title.rendered;
 				dest.querySelector("[data-long_description]").innerHTML = news_item.acf.long_description;
+				dest.querySelector("[data-stirub]").textContent = news_item.title.rendered;
 
 				// hentet ind
 				console.log("nyhed er hentet ind");

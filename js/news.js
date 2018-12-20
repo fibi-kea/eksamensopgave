@@ -69,7 +69,7 @@ function visNews() {
 			window.location.href = "news_article.html?p=" + news_item.slug;
 		});
 		klon.querySelector("[data-billede]").setAttribute("src", news_item.acf.photo.sizes.medium_large);
-		klon.querySelector("[data-billede]").setAttribute("alt", news_item.acf.short_description);
+		klon.querySelector("[data-billede]").setAttribute("alt", news_item.acf.short_desciption);
 		klon.querySelector("[data-dato]").textContent = news_item.acf.dato_picker;
 		klon.querySelector("[data-title]").textContent = news_item.title.rendered;
 		klon.querySelector("[data-short_description]").textContent = news_item.acf.short_desciption;
