@@ -423,6 +423,7 @@ ul.breadcrumb li a:hover {
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 100px;
+    cursor: pointer;
 }
 
 .home_description {
@@ -664,6 +665,7 @@ PRODUCTS--------------------------
 
 .single_product {
     position: relative;
+    cursor: pointer;
 }
 
 .product_thumbnail {
@@ -725,7 +727,7 @@ PRODUCTS--------------------------
     margin: 100px auto 0px auto;
     width: 160px;
     position: fixed;
-    top: -20px;
+    top: 10px;
     right: 40px;
     z-index: 999;
     transition: 0.5s;
@@ -1225,6 +1227,7 @@ NEWS--------------------------
 .single_news {
     border-bottom: 1px solid var(--txt);
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .single_news:first-child {
@@ -1743,7 +1746,7 @@ a:nth-child(2) .fab {
 
     .fullscreen-bg {
         grid-column: 7 / 13;
-        background-image: url('../img/video_bg_mobile.jpg');
+        background-image: none !important;
         background-size: cover;
         background-position: center;
     }
