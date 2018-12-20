@@ -1,3 +1,7 @@
+//	dokument DOM loadet
+document.addEventListener("DOMContentLoaded", hentJson);
+
+
 //--------------------------- Indhent sideindhold ---------------------------------
 
 
@@ -18,6 +22,7 @@ async function hentJson() {
 	//	indsæt i DOM
 
 	//	SEO title & description
-	dest.querySelector("[data-seo_title]").textContent = "produkcts | " + side.title.rendered;
+	dest.querySelector("[data-seo_title]").textContent = side.title.rendered;
 	dest.querySelector("[data-seo_description]").setAttribute("content", side.acf.seo_description);
+	dest.querySelector("[data-biografi]").innerHTML = side.acf.biografi;
 }
